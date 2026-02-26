@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navcon">
+        <div class="izqNav"> Andres Rivera
+        
+        </div>
+
+        <ul>
+            <li><a href="#texto">Home</a></li>
+            <li><a href="#acerca">About me</a></li>
+            <li><a href="#snake">Juego</a></li>
+            <li><a href="#contUlt">Contacto</a></li>
+        </ul>
+    </nav>
+
+  
+
+<section id= "texto" class="parte1">
+
+<div class="texto">
+
+  <h1>
+    <span class="small">Soy</span>
+    <span class="nombre">Andres Rivera</span>
+    <span class="small">TECNICO EN SISTEMAS Y ESTUDIANTE DE DESARROLLO WEB</span>
+  </h1>
+
+  <p class="texto2">
+    Soy TECNICO EN SISTEMAS y estudiante de DESARROLLO WEB.
+    Me apasiona crear, aprender y llevar mis ideas a la realidad
+    a través de la programación y creatividad. 
+  </p>
+
+  <a href="CV-AndresRivera.pdf" download class="cv">
+    <i class="fa-solid fa-download"></i> Descargar CV
+  </a>
+
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andresrmartinez2524@gmail.com" class="email">
+    ➜ Contáctame
+  </a>
+
+</div>
+
+</section>
+
+
+<section class="flecha">
+<div class="flecha1">↓</div>
+<div class="flecha2">↓</div>
+</section>
+
+<section id="acerca">
+  
+  <div class="acerca-img">
+    <img src="foto.png" alt="Foto perfil">
+  </div>
+
+  <div class="acerca-texto">
+    <h2>Acerca de Mí</h2>
+    <h3>Andres Rivera</h3>
+
+    <p>
+      Estudiante apasionado por el desarrollo web y la tecnología. 
+      Me gusta crear interfaces modernas y funcionales. Aprendiendo nuevas tecnologias como (n8n, ReactJS).
+    </p>
+
+    <div class="bloque">
+      <h4>Educación</h4>
+      <p>Bachiller (Graduado)</p>
+      <p>Técnico en Sistemas - CUN (Graduado) </p>
+      <p>Desarrollo web - SENA (Actualmente)</p>
+      
+    </div>
+
+    <div class="bloque">
+      <h4>Experiencia</h4>
+      <p>Practicante de infraestructura, INTERRAPIDISIMO</p>
+      <p>Proyectos personales en desarrollo web</p>
+      
+    </div>
+
+    <div class="bloque">
+      <h4>Habilidades Tecnicas </h4>
+      <div class="habi">
+      <span>JavaScript</span>
+      <span>Css</span>
+      <span>Html</span>
+     </div>
+  
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="snake">
+
+<div class="instrucciones">
+    <h3>Cómo jugar:</h3>
+    <ul>
+        <li>W → Mover hacia arriba</li>
+        <li>A → Mover hacia la izquierda</li>
+        <li>S → Mover hacia abajo</li>
+        <li>D → Mover hacia la derecha</li>
+    </ul>
+    <p>Evita chocar contra los bordes y consigue la mayor puntuación posible.</p>
+</div>
+
+  <div class="juego">
+  <h1>JUEGO DE SNAKE</h1>
+    <h2 id ="puntuacion"> </h2>
+   <canvas id="myCanvas" width="600" height="400"></canvas>
+   </div>
+   
+   
+
+   <div class="motivo">
+    <p> Desarrollo de un juego tipo Snake utilizando 
+      JavaScript. Implementa un game loop, manipulación dinámica de arrays para el crecimiento del personaje,
+       detección de colisiones con límites y sistema de puntuación actualizado en tiempo real mediante manipulación del DOM.</p>
+
+       <p> Este proyecto fue desarrollado con el objetivo de fortalecer mis habilidades en manipulación del DOM, la implementación de lógica de colisiones y el manejo dinámico de estructuras de datos como arrays,
+         aplicados en un entorno interactivo en tiempo real.</p>
+
+         <p> Este proyecto fue desarrollado con ayuda de documentacion MDN, chatgpt, conocimiento previo.</p>
+   </div>
+
+</section>
+
+
+<div class="footer-links">
+    
+
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andresrmartinez2524@gmail.com">
+        Envíame un correo
+    </a>
+
+    <a id = "wasa" href="https://wa.me/573128158154" target="_blank">
+        Contáctame por WhatsApp
+    </a>
+</div>
+    
+
+
+<footer id = "contUlt" class="footer">
+    <div class="footer-content">
+        <h3>Andres Rivera</h3>
+        <p>Desarrollador Frontend en formación</p>
+
+        </div>
+
+        <p class="copy">© 2026 Andres Rivera. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
