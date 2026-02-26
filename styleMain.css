@@ -1,5 +1,7 @@
 
-
+* {
+  box-sizing: border-box;
+}
     body{
     height: 100vh;
     margin: 0;
@@ -15,7 +17,6 @@
     text-decoration: none;
     letter-spacing: 2px;
    
-    
 }
     
 
@@ -165,7 +166,7 @@ padding-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 100px;
-  align-items: start;  /* 🔥 ESTA ES LA CLAVE */
+  align-items: start;  
 
 
 }
@@ -214,46 +215,6 @@ padding-bottom: 100px;
   border-radius: 10%;
   box-shadow: 30px 10px 12px rgba(0, 0, 0, 0.3);
 }
-
-
-/* Hacemos que cada estudio pueda contener la capa */
-.estudio1,
-.estudio2,
-.estudio3 {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-/* Capa que aparece */
-.overlay {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.9);
-  color: rgb(255, 255, 255);
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: auto;
-
-  transition: bottom 0.4s ease;
-}
-
-/* 🔥 Cuando pasas el mouse */
-.estudio1:hover .overlay,
-.estudio2:hover .overlay,
-.estudio3:hover .overlay {
-  bottom: 0;
-}
-
 
 
 .estudios p{
@@ -345,21 +306,49 @@ padding-bottom: 100px;
   margin-bottom: 20px;
 }
 
-
-.logos{
-  gap: 50px;
+#habilidadesTec{
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+    
 }
-.logos img {
- padding: 30px;
-  width: 0px;
+
+
+#habilidadesTec ul{
+  list-style-type: disc;
+  color: white;
+
+}
+
+.habilidadBlanda{
+  border-left: 3px solid #0099ff;
+  padding-left: 30px;
+  margin-bottom: 20px;
   
 }
+.aplicaciones{
+  border-left: 3px solid #0099ff;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.habi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 
 .habi span{
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   border: solid rgb(9, 37, 41);
-
   padding: 8px 12px;
   color: rgb(255, 254, 254);
   border-radius: 20px;
@@ -480,61 +469,42 @@ ul {
 }
 
 
-/* RESPONSIVE TABLET */
-
-@media (max-width: 1024px) {
-
-  .parte1 {
-    gap: 80px;
-    padding-left: 40px;
-    padding-top: 150px;
-  }
-
-  .texto2 {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .estudios {
-    gap: 50px;
-  }
-
-}
-
-
-
-/* RESPONSIVE MOVIL */
-
 @media (max-width: 768px) {
 
   /* NAV */
   .navcon {
-    padding: 0 10px;
-  }
-
-  .izqNav {
-    width: auto;
-    font-size: 18px;
+    flex-direction: column;
+    height: auto;
+   
   }
 
   .navcon ul {
     gap: 15px;
-    font-size: 13px;
-    margin-right: 10px;
+    margin: 10px 0 0 0;
+    padding-bottom: 20px;
   }
 
-  /* HERO SECTION */
+  .izqNav {
+    width: auto;
+    font-size: 20px;
+  }
+
+  /* HERO */
   .parte1 {
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    padding-left: 20px;
+    padding-top: 120px;
     gap: 40px;
-    padding: 120px 20px 0 20px;
+  }
+
+  .foto {
+    width: 220px;
+    height: 320px;
+    transform: rotate(0deg);
   }
 
   .small {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   .nombre {
@@ -542,22 +512,13 @@ ul {
   }
 
   .texto2 {
-    width: 100%;
-    max-width: 90%;
     font-size: 16px;
-    line-height: 1.4;
-  }
-
-  .foto {
-    width: 250px;
-    height: 350px;
-    transform: rotate(0);
+    width: 100%;
   }
 
   /* ESTUDIOS */
   .estudios {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
@@ -565,34 +526,50 @@ ul {
   .estudio2,
   .estudio3 {
     width: 90%;
-    max-width: 320px;
-    height: 380px;
+    height: auto;
+    padding: 20px;
   }
 
   /* ACERCA */
   #acerca {
     flex-direction: column;
-    text-align: left;
-    gap: 40px;
     padding: 100px 20px;
+    gap: 40px;
   }
 
   .acerca-img img {
-    width: 280px;
-    height: 380px;
+    width: 250px;
+    height: 350px;
   }
 
-  /* LOGOS */
-  .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  .acerca-texto h2 {
+    font-size: 30px;
   }
 
+  /* HABILIDADES */
+  #habilidadesTec {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+   
+  }
 
+  /* SNAKE */
+  #snake {
+    flex-direction: column;
+    padding: 100px 20px;
+    gap: 40px;
+  }
+
+  #myCanvas {
+    width: 100%;
+    height: auto;
+  }
 
 }
+
+
+
 /* ANIMACIONES */
 @keyframes subirBajar {
   0% { transform: translateY(0); }
